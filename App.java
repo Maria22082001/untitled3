@@ -11,6 +11,7 @@ public class App {
 	car.speedUp(15);
 	car.speedUp(20);
 	car.speedUp(30);
+	car.speedUp(40);  
 	car.park();
   }
 }
