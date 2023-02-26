@@ -11,8 +11,8 @@ public class Car implements Vehicle{
 	
 	
 	public Car() {
-		this.speed=0;
-		this.gear=0;
+		this.speed= speed;
+		this.gear= gear;
 		this.type= carType.MANUAL;
 	}
 	public Car(int speed, int gear, carType type) {
@@ -35,7 +35,7 @@ public class Car implements Vehicle{
 	public void park() {
 		System.out.println("Parking...");
 		while (speed>0 && gear>MIN_GEAR) {
-		speedDown(10);
+		speedDown(15);
 		}
 		System.out.println("Car stopped..it is safe to get out");
 		
