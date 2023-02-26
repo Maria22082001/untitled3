@@ -53,7 +53,7 @@ public class Car implements Vehicle{
 	@Override
 	public int speedDown(int decrement) {
 		 speed -= decrement;
-		   if (gear>MAX_GEAR)
+		   if (gear>MIN_GEAR)
 			   gear--;
 		   System.out.println("Speed: "+speed+ "Gear: "+ gear); 
 			return speed;
