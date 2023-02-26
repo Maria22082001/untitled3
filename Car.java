@@ -2,7 +2,7 @@ package OOPReview;
 
 public class Car implements Vehicle{
 	
-	private final int MAX_GEAR =5;
+	private final int MAX_GEAR = 5;
 	private final int MIN_GEAR = 0;
     
 	private int  speed=0;
@@ -33,21 +33,29 @@ public class Car implements Vehicle{
 
 	@Override
 	public void park() {
-		// TODO Auto-generated method stub
 		System.out.println("Parking...");
-		while 
+		while (speed>0 && gear>MIN_GEAR) {
+		speedDown(10);
+		}
+		System.out.println("Car stopped..it is safe to get out");
+		
 	}
 
 	@Override
 	public int speedUp(int increment) {
-		// TODO Auto-generated method stub
-		return 0;
+		speed+=increment;
+		if (gear<MAX_GEAR)
+			gear++;
+		System.out.println("Speed: "+speed+ "Gear: "+ gear); 
+		return speed;
 	}
 
 	@Override
 	public int speedDown(int decrement) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
+		 speed -= decrement;
+		   if (gear>MAX_GEAR)
+			   gear--;
+		   System.out.println("Speed: "+speed+ "Gear: "+ gear); 
+			return speed;
+		}  
 }
